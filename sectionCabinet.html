@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="assets/images/favicons/favicon.ico">
+    <title>Сервис пополнения</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+  </head>
+  <body>
+    <header class="header__cabinet"> 
+      <div class="container"> <img class="header__cabinet-logo" src="assets/images/logo.png" alt="Логотип">
+        <div class="cabinet"><span>Привет, &nbsp;</span>
+          <div class="cabinet__user"><span class="cabinet__user-name">Константин
+              <svg class="icon icon-arrow_down user__arrow-icon">
+                <use xlink:href="assets/images/svg/symbol/sprite.svg#arrow_down"></use>
+              </svg></span><span class="cabinet__user-status">Пользователь</span></div><img src="assets/images/user_photo.jpg" alt="Фото пользователя">
+          <svg class="icon icon-arrow_down user__arrow-icon">
+            <use xlink:href="assets/images/svg/symbol/sprite.svg#arrow_down"></use>
+          </svg>
+        </div>
+      </div>
+    </header>
+    <main class="main"> 
+      <div class="container myCabinets">
+        <h2 class="myCabinets__heading">Мои рекламные кабинеты</h2><a class="myCabinets__link" href="#">
+          <svg class="icon icon-MyTarget myCabinets__link-logo">
+            <use xlink:href="assets/images/svg/symbol/sprite.svg#MyTarget"></use>
+          </svg>
+          <div class="myCabinets__link-text">
+            <h3 class="myCabinets__text-heading">Рекламные кабинеты MyTarget</h3>
+            <p class="myCabinets__text-status">
+               Статус: подключено</p>
+          </div>
+          <svg class="icon icon-arrow myCabinets__link-arrow">
+            <use xlink:href="assets/images/svg/symbol/sprite.svg#arrow"></use>
+          </svg></a>
+      </div>
+      <div class="container myCabinets">
+        <h2 class="myCabinets__heading">Подключить другие кабинеты:</h2><a class="myCabinets-plugCabinet" href="#"><img src="assets/images/vk.png" alt="Vkontakte"></a><a class="myCabinets-plugCabinet" href="#"><img src="assets/images/yandex.png" alt="Yandex"></a>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <h2 class="footer__heading">ООО “ВТаргете”</h2>
+        <nav class="footer__menu">
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item"><a class="footer__menu-link" href="">Оферта</a></li>
+            <li class="footer__menu-item"><a class="footer__menu-link" href="">Политика конфиденциальности</a></li>
+            <li class="footer__menu-item"><a class="footer__menu-link" href="">Условия оплаты</a></li>
+            <li class="footer__menu-item"><a class="footer__menu-link" href="">Отказ от ответственности</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <div class="modal" id="delete">
+      <div class="modal__overlay"> </div>
+      <div class="modal__block"> 
+        <div class="modal__close"><img class="modal__close_icon" src="assets/images/close_big.svg" alt=""></div>
+        <div class="modal__header modal__header--big">
+          Удалить </br>
+          кабинет?
+        </div>
+        <div class="modal__body">Пожалуйста, подтвердите удаление кабинета.</div>
+        <div class="login-modal_block__social"> <a class="modal-social_button" href="#">Удалить</a><a class="modal-social_button modal-social_button--white" href="#">Отменить</a></div>
+      </div>
+    </div>
+    <div class="modal" id="replenishments">
+      <div class="modal__overlay"> </div>
+      <div class="modal__block"> 
+        <div class="modal__close"><img class="modal__close_icon" src="assets/images/close_big.svg" alt=""></div>
+        <div class="modal__heading">
+          <svg class="icon icon-chevron_down modal__heading-icon">
+            <use xlink:href="assets/images/svg/symbol/sprite.svg#chevron_down"></use>
+          </svg>
+          <div class="modal__heading-text">Пополнить кабинет</div>
+        </div>
+        <div class="modal__select-cabinet"><span class="cabinet__text">Выберите кабинет</span>
+          <div class="select js-select">
+            <div class="select__cabinet">
+              <div class="select__cabinet-name">
+                <svg class="icon icon-green_ellipse modal__cabinet-icon">
+                  <use xlink:href="assets/images/svg/symbol/sprite.svg#green_ellipse"></use>
+                </svg>
+                <p class="select__cabinet-text">
+                   ADR-ANQ-PERVY-LS-1S LS Школа
+                  стройной жизни Никон (Скляр
+                </p>
+                <svg class="icon icon-caret_down select__cabinet-icon">
+                  <use xlink:href="assets/images/svg/symbol/sprite.svg#caret_down"></use>
+                </svg>
+              </div>
+            </div>
+            <ul class="select__hidden"> 
+              <li class="select__cabinet">
+                <div class="select__cabinet-name">
+                  <svg class="icon icon-green_ellipse modal__cabinet-icon">
+                    <use xlink:href="assets/images/svg/symbol/sprite.svg#green_ellipse"></use>
+                  </svg>
+                  <p class="select__cabinet-text">
+                     ADR-ANQ-PERVY-LS-1S LS Школа
+                    стройной жизни Никон (Скляр
+                  </p>
+                </div>
+              </li>
+              <li class="select__cabinet">
+                <div class="select__cabinet-name">
+                  <svg class="icon icon-green_ellipse modal__cabinet-icon">
+                    <use xlink:href="assets/images/svg/symbol/sprite.svg#green_ellipse"></use>
+                  </svg>
+                  <p class="select__cabinet-text">
+                     ADR-ANQ-PERVY-LS-1S LS Школа
+                    стройной жизни Никон (Скляр
+                  </p>
+                </div>
+              </li>
+              <li class="select__cabinet">
+                <div class="select__cabinet-name">
+                  <svg class="icon icon-green_ellipse modal__cabinet-icon">
+                    <use xlink:href="assets/images/svg/symbol/sprite.svg#green_ellipse"></use>
+                  </svg>
+                  <p class="select__cabinet-text">
+                     ADR-ANQ-PERVY-LS-1S LS Школа
+                    стройной жизни Никон (Скляр
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <form action="#" method="get">
+          <input class="sum" type="text" placeholder="Сумма пополнения">
+          <input class="email" type="email" placeholder="Электронная почта">
+          <div class="agreement">   
+            <label class="switch">
+              <input type="checkbox"><span class="slider"></span>
+            </label>
+            <p class="agreement__text">Подтверждаю ознакомление и принимаю <a href="#">все условия </a>договора-оферты</p>
+          </div>
+          <div class="agreement"> 
+            <label class="switch">
+              <input type="checkbox"><span class="slider"></span>
+            </label>
+            <p class="agreement__text">Подтверждаю ознакомление и принимаю <a href="#">правила размещения рекламных объявлений </a>  в ВКонтакте</p>
+          </div>
+        </form>
+        <table class="modal__table"> 
+          <tr class="modal__table-row">
+            <td class="modal__table-text">
+               Сумма пополнения</td>
+            <td class="modal__table-sum">
+               55 000 &#8381;</td>
+          </tr>
+          <tr class="modal__table-row"> 
+            <td class="modal__table-text">
+               Бонусы </td>
+            <td class="modal__table-sum">
+               5 500 &#8381;</td>
+          </tr>
+          <tr class="modal__table-row"> 
+            <td class="modal__table-text">
+               Итого к зачислению</td>
+            <td class="modal__table-sum total-sum">
+               60 500 &#8381;</td>
+          </tr>
+        </table>
+        <button class="replenish-btn">Пополнить</button>
+      </div>
+    </div>
+    <div class="modal" id="transfer">
+      <div class="modal__overlay"> </div>
+      <div class="modal__block">
+        <div class="modal__close"><img class="modal__close_icon" src="assets/images/close_big.svg" alt=""></div>
+        <div class="modal__heading">Перевести бюджет
+          <p class="modal__heading-text">
+             Вы можете свободно перемещать бюджеты
+            между своими кабинетами
+          </p>
+        </div>
+        <div class="cabinet__wrapper">
+          <svg class="icon icon-circle_arrow replace__cabinet-icon">
+            <use xlink:href="assets/images/svg/symbol/sprite.svg#circle_arrow"></use>
+          </svg>
+          <div class="modal__cabinet"> <span class="cabinet__text">Выберите кабинет списания</span>
+            <div class="select js-select">
+              <div class="select__cabinet">
+                <div class="select__cabinet-name">
+                  <svg class="icon icon-green_ellipse modal__cabinet-icon">
+                    <use xlink:href="assets/images/svg/symbol/sprite.svg#green_ellipse"></use>
+                  </svg>
+                  <p class="select__cabinet-text">
+                     ADR-ANQ-PERVY-LS-1S LS Школа
+                    стройной жизни Никон (Скляр
+                  </p>
+                  <svg class="icon icon-caret_down select__cabinet-icon">
+                    <use xlink:href="assets/images/svg/symbol/sprite.svg#caret_down"></use>
+                  </svg>
+                </div><span class="select__cabinet-sum">55 000 &#8381;</span>
+              </div>
+              <ul class="select__hidden"> 
+                <li class="select__cabinet">
+                  <div class="select__cabinet-name">
+                    <svg class="icon icon-green_ellipse modal__cabinet-icon">
+                      <use xlink:href="assets/images/svg/symbol/sprite.svg#green_ellipse"></use>
+                    </svg>
+                    <p class="select__cabinet-text">
+                       ADR-ANQ-PERVY-LS-1S LS Школа
+                      стройной жизни Никон (Скляр
+                    </p>
+                  </div><span class="select__cabinet-sum">55 000 &#8381;</span>
+                </li>
+                <li class="select__cabinet">
+                  <div class="select__cabinet-name">
+                    <svg class="icon icon-green_ellipse modal__cabinet-icon">
+                      <use xlink:href="assets/images/svg/symbol/sprite.svg#green_ellipse"></use>
+                    </svg>
+                    <p class="select__cabinet-text">
+                       ADR-ANQ-PERVY-LS-1S LS Школа
+                      стройной жизни Никон (Скляр
+                    </p>
+                  </div><span class="select__cabinet-sum">55 000 &#8381;</span>
+                </li>
+                <li class="select__cabinet">
+                  <div class="select__cabinet-name">
+                    <svg class="icon icon-green_ellipse modal__cabinet-icon">
+                      <use xlink:href="assets/images/svg/symbol/sprite.svg#green_ellipse"></use>
+                    </svg>
+                    <p class="select__cabinet-text">
+                       ADR-ANQ-PERVY-LS-1S LS Школа
+                      стройной жизни Никон (Скляр
+                    </p>
+                  </div><span class="select__cabinet-sum">55 000 &#8381;</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal__cabinet"> <span class="cabinet__text">Выберите кабинет пополнения</span>
+            <div class="select js-select">   
+              <div class="select__cabinet">
+                <div class="select__cabinet-name"> 
+                  <svg class="icon icon-green_ellipse modal__cabinet-icon--yellow">
+                    <use xlink:href="assets/images/svg/symbol/sprite.svg#green_ellipse"></use>
+                  </svg>
+                  <p class="select__cabinet-text">
+                     Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Cras in ligula libero
+                  </p>
+                  <svg class="icon icon-caret_down select__cabinet-icon">
+                    <use xlink:href="assets/images/svg/symbol/sprite.svg#caret_down"></use>
+                  </svg>
+                </div><span class="select__cabinet-sum">2 130 &#8381;</span>
+              </div>
+              <ul class="select__hidden"> 
+                <li class="select__cabinet">
+                  <div class="select__cabinet-name">
+                    <svg class="icon icon-green_ellipse modal__cabinet-icon">
+                      <use xlink:href="assets/images/svg/symbol/sprite.svg#green_ellipse"></use>
+                    </svg>
+                    <p class="select__cabinet-text">
+                       ADR-ANQ-PERVY-LS-1S LS Школа
+                      стройной жизни Никон (Скляр
+                    </p>
+                  </div><span class="select__cabinet-sum">55 000 &#8381;</span>
+                </li>
+                <li class="select__cabinet">
+                  <div class="select__cabinet-name">
+                    <svg class="icon icon-green_ellipse modal__cabinet-icon">
+                      <use xlink:href="assets/images/svg/symbol/sprite.svg#green_ellipse"></use>
+                    </svg>
+                    <p class="select__cabinet-text">
+                       ADR-ANQ-PERVY-LS-1S LS Школа
+                      стройной жизни Никон (Скляр
+                    </p>
+                  </div><span class="select__cabinet-sum">55 000 &#8381;</span>
+                </li>
+                <li class="select__cabinet">
+                  <div class="select__cabinet-name">
+                    <svg class="icon icon-green_ellipse modal__cabinet-icon">
+                      <use xlink:href="assets/images/svg/symbol/sprite.svg#green_ellipse"></use>
+                    </svg>
+                    <p class="select__cabinet-text">
+                       ADR-ANQ-PERVY-LS-1S LS Школа
+                      стройной жизни Никон (Скляр
+                    </p>
+                  </div><span class="select__cabinet-sum">55 000 &#8381;</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="sum__replenishment"> 
+          <svg class="icon icon-arrows sum__replenishment-icon">
+            <use xlink:href="assets/images/svg/symbol/sprite.svg#arrows"></use>
+          </svg>56 000 &#8381;
+          <svg class="icon icon-note error-icon">
+            <use xlink:href="assets/images/svg/symbol/sprite.svg#note"></use>
+          </svg>
+        </div>
+        <p class="error__text">Сумма перевода больше, чем доступно в кабинете</p>
+        <button class="transfer-btn">Перевести</button>
+      </div>
+    </div>
+    <div class="modal" id="cabinet">
+      <div class="modal__overlay"></div>
+      <div class="modal__block--cabinet"> 
+        <div class="modal__close"><img class="modal__close_icon" src="assets/images/close_big.svg" alt=""></div>
+        <div class="modal__header">Доступы к кабинету</div>
+        <div class="modal__body--add">
+          <div class="user-item"> <img class="user-item_avatar" src="assets/images/user_photo.jpg" alt="">
+            <div class="user-item_info"> 
+              <div class="user-item_name">Константин Крестинин</div>
+              <div class="user-item_position">Владелец</div>
+            </div>
+          </div>
+          <div class="user-item"> <img class="user-item_avatar" src="assets/images/user_photo.jpg" alt="">
+            <div class="user-item_info">
+              <div class="user-item_name--add">Артур Абдурашитов</div>
+              <div class="user-item_observer">Наблюдатель<img class="chevron" src="assets/images/chevron_down.svg" alt=""></div>
+            </div><a class="close-icon_link" href="#delete"> <img class="close_icon" src="assets/images/close_big.svg" alt=""></a>
+          </div>
+          <div class="modal_vk">
+            <input class="modal__body-input" type="text" placeholder="Ссылка на профиль в ВК">
+            <button class="btn-circle btn-circle-modal">
+              <svg class="icon icon-close_big btn-circle_close">
+                <use xlink:href="assets/images/svg/symbol/sprite.svg#close_big"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <button class="modal-button_accept--bottom">Применить</button>
+      </div>
+    </div>
+    <div class="modal" id="delete">
+      <div class="modal__overlay"> </div>
+      <div class="modal__block"> 
+        <div class="modal__close"><img class="modal__close_icon" src="assets/images/close_big.svg" alt=""></div>
+        <div class="modal__header modal__header--big">
+          Удалить </br>
+          кабинет?
+        </div>
+        <div class="modal__body">Пожалуйста, подтвердите удаление кабинета.</div>
+        <div class="login-modal_block__social"> <a class="modal-social_button" href="#">Удалить</a><a class="modal-social_button modal-social_button--white" href="#">Отменить</a></div>
+      </div>
+    </div>
+    <div class="modal" id="rename">
+      <div class="modal__overlay"></div>
+      <div class="modal__block--rename"> 
+        <div class="modal__close"><img class="modal__close_icon" src="assets/images/close_big.svg" alt=""></div>
+        <div class="modal__header">Переименовать кабинет</div>
+        <input class="modal-cabinet" type="text" maxlength="60" placeholder="ANQ-PERVY-LS-1S LS Школа стройной жизни Никон " data-field="item">
+        <div class="counter-text">Символов:</div><span class="modal-counter" data-field="target"></span>
+        <div class="counter-number">/60</div><img class="modal-pencil" src="assets/images/edit.svg" alt="">
+        <button class="modal-button_accept">ПEРЕИМЕНОВАТЬ</button>
+      </div>
+    </div>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/libs.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
