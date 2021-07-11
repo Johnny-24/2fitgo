@@ -12,7 +12,7 @@
       <div class="container">
         <nav class="header__menu">
           <ul class="header__list">
-            <li class="header__list-item"><a class="header__list-link open-modal" href="#transfer">
+            <li class="header__list-item"><a class="header__list-link" href="personalArea.html">
                 <svg class="icon icon-user header__list-icon">
                   <use xlink:href="assets/images/svg/symbol/sprite.svg#user"></use>
                 </svg><span>Кабинеты</span></a></li>
@@ -24,7 +24,7 @@
                 <svg class="icon icon-line_chart_up header__list-icon">
                   <use xlink:href="assets/images/svg/symbol/sprite.svg#line_chart_up"></use>
                 </svg><span>Отчеты</span></a></li>
-            <li class="header__list-item"><a class="header__list-link open-modal" href="#replenishments">
+            <li class="header__list-item"><a class="header__list-link open-modal" href="#">
                 <svg class="icon icon-tools header__list-icon">
                   <use xlink:href="assets/images/svg/symbol/sprite.svg#tools"></use>
                 </svg><span>Инструменты</span></a></li>
@@ -452,8 +452,8 @@
       <div class="modal__overlay"> </div>
       <div class="modal__block">
         <div class="modal__close"><img class="modal__close_icon" src="assets/images/close_big.svg" alt=""></div>
-        <div class="modal__heading">Перевести бюджет
-          <p class="modal__heading-text">
+        <div class="transfer__heading">Перевести бюджет
+          <p class="transfer__heading-text">
              Вы можете свободно перемещать бюджеты
             между своими кабинетами
           </p>
@@ -632,6 +632,93 @@
         <div class="counter-text">Символов:</div><span class="modal-counter" data-field="target"></span>
         <div class="counter-number">/60</div><img class="modal-pencil" src="assets/images/edit.svg" alt="">
         <button class="modal-button_accept">ПEРЕИМЕНОВАТЬ</button>
+      </div>
+    </div>
+    <div class="modal" id="signUp">
+      <div class="modal__overlay"> </div>
+      <div class="modal__block"> 
+        <div class="modal__close"><img class="modal__close_icon" src="assets/images/close_big.svg" alt=""></div>
+        <h2 class="modal__heading">Регистрация</h2>
+        <p class="modal__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Aenean tristique a ante vel ullamcorper.
+        </p>
+        <form action="#" method="get">
+          <input class="email" type="email" placeholder="Электронная почта">
+          <input class="password" type="password" placeholder="Пароль">
+          <button class="modal-btn">Зарегистрироваться</button>
+        </form>
+      </div>
+    </div>
+    <div class="modal" id="waitSignUp">
+      <div class="modal__overlay"> </div>
+      <div class="modal__block"> 
+        <div class="modal__close"><img class="modal__close_icon" src="assets/images/close_big.svg" alt=""></div>
+        <h2 class="modal__heading">Завершение регистрации</h2>
+        <p class="modal__text">Мы отправили письмо с подтверждением регистрации на указанную почту</p><a href="#">Отправить письмо ещё раз</a>
+        <button class="modal-btn">Отправить письмо ещё раз</button>
+      </div>
+    </div>
+    <div class="modal" id="completeSignUp">
+      <div class="modal__overlay"> </div>
+      <div class="modal__block"> 
+        <div class="modal__close"><img class="modal__close_icon" src="assets/images/close_big.svg" alt=""></div>
+        <svg class="icon icon-complete complete-icon">
+          <use xlink:href="assets/images/svg/symbol/sprite.svg#complete"></use>
+        </svg>
+        <h2 class="modal__heading">Email подтверждён</h2>
+        <p class="modal__text">
+          Успешно! Вы подтвердили свой аккаунт,
+          теперь можно приступать к работе
+        </p>
+        <button class="modal-btn">Готово</button>
+      </div>
+    </div>
+    <div class="modal" id="enterAccount">
+      <div class="modal__overlay"> </div>
+      <div class="modal__block"> 
+        <div class="modal__close"><img class="modal__close_icon" src="assets/images/close_big.svg" alt=""></div>
+        <h2 class="modal__heading">Войти в аккаунт</h2>
+        <p class="modal__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Aenean tristique a ante vel ullamcorper. 
+        </p>
+        <form action="#" method="get">
+          <input class="email" type="email" placeholder="Электронная почта">
+          <input class="password" type="password" placeholder="Пароль">
+          <button class="modal-btn">Зарегистрироваться</button>
+        </form><a class="forgotPass-link" href="#recoveryPass">Забыли пароль? </a>
+      </div>
+    </div>
+    <div class="modal" id="recoveryPass">
+      <div class="modal__overlay"> </div>
+      <div class="modal__block"> 
+        <div class="modal__close"><img class="modal__close_icon" src="assets/images/close_big.svg" alt=""></div>
+        <h2 class="modal__heading">Восстановление пароля</h2>
+        <p class="modal__text">
+          Введите почту, указанную при регистрации.
+          Мы отправим на неё письмо с восстановлением пароля 
+        </p>
+        <form action="#" method="get">
+          <input class="email" type="email" placeholder="Электронная почта">
+          <button class="modal-btn">Восстановить</button>
+        </form>
+      </div>
+    </div>
+    <div class="modal" id="enterNewPass">
+      <div class="modal__overlay"> </div>
+      <div class="modal__block"> 
+        <div class="modal__close"><img class="modal__close_icon" src="assets/images/close_big.svg" alt=""></div>
+        <h2 class="modal__heading">Введите новый пароль</h2>
+        <p class="modal__text">
+          Ваш предыдущий пароль сброшен. <br>
+          Введите ваш новый пароль (помните про безопасность)
+        </p>
+        <form action="#" method="get">
+          <input class="password" type="password" placeholder="Введите новый пароль">
+          <input class="password" type="password" placeholder="Повторите ввод пароля">
+          <button class="modal-btn">Обновить пароль</button>
+        </form>
       </div>
     </div>
     <script src="assets/js/jquery.js"></script>
