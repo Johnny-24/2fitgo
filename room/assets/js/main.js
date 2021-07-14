@@ -12,7 +12,7 @@ $(document).on('ready', function () {
   var mainPhotos = $('.main-photos__item');
   var footer = $('.footer');
   var footerSecond = $('.footer-second');
-  var cursorElBlock = $('.main-photos__item').eq(-2);
+  var cursorElBlock = $('.main-photos__item').eq(-1);
   var cursorElBlockH = $(cursorElBlock).offset().top - hScreen;
   var lastScreenPosition = $('.main-photos__item').eq(-1);
   var endPOsition = $(lastScreenPosition).offset().top + $(lastScreenPosition).height();
@@ -20,7 +20,7 @@ $(document).on('ready', function () {
   var lastPhotoPosition = $(mainPhotos).eq(mainPhotos.length - 2).offset().top + hMainTitle;
   var indent = hScreen - (hScreen / 2 + hMainTitle / 2);
   $(window).on('scroll', function () {
-    console.log('lastPhotoPosition', lastPhotoPosition);
+    // console.log('lastPhotoPosition', lastPhotoPosition);
     console.log('pageYOffset', pageYOffset);
 
     if (pageYOffset < indent || pageYOffset > lastPhotoPosition) {
@@ -37,18 +37,28 @@ $(document).on('ready', function () {
       $(footer).removeClass('hide');
     }
 
-    if (pageYOffset > cursorElBlockH && scrollToDownFlag) {
+    if (pageYOffset > cursorElBlockH + hScreen / 2 && scrollToDownFlag) {
       scrollToDownFlag = false;
       $("html, body").animate({
         scrollTop: endPOsition
       }, 1000);
       $('.custom-cursor').css('display', 'flex');
       $('html').css('cursor', 'none');
-    } else if (pageYOffset < cursorElBlockH && !scrollToDownFlag) {
+    } else if (pageYOffset < cursorElBlockH + hScreen / 2 && !scrollToDownFlag) {
       scrollToDownFlag = true;
       $('.custom-cursor').hide();
       $('html').css('cursor', 'default');
     }
+
+    var footer_second_left = $('.footer-second__left');
+    $(footer_second_left).on('mouseleave', function () {
+      $('.custom-cursor').css('display', 'flex');
+      $('html').css('cursor', 'none');
+    });
+    $(footer_second_left).on('mouseover', function () {
+      $('.custom-cursor').hide();
+      $('html').css('cursor', 'default');
+    });
   }); // Cursor
 
   var cursor = $('.custom-cursor');
