@@ -47,5 +47,6 @@ $(document).on("ready", function () {
 
   function modalSuccess() {
     $('.modal').removeClass('active');
+    $('#success').addClass('active');
   }
 });
