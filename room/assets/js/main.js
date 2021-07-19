@@ -79,7 +79,7 @@ $(document).on('ready', function () {
   };
   ScrollTrigger.create({
     onUpdate: function onUpdate(self) {
-      var skew = self.getVelocity() / -300;
+      var skew = self.getVelocity() / -600;
 
       if (Math.abs(skew) > Math.abs(proxy.skew)) {
         proxy.skew = skew;
