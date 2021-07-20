@@ -48,5 +48,20 @@ $(document).on("ready", function () {
   function modalSuccess() {
     $('.modal').removeClass('active');
     $('#success').addClass('active');
-  }
+  } // modal menu catalog
+
+
+  var product_ist_breadcrumbs_item = $('.product-list__breadcrumbs-item span');
+  $(product_ist_breadcrumbs_item).on('click', function () {
+    $(this).parent().toggleClass('active');
+  });
+  $(document).on('mouseup', function (e) {
+    var div = $(".product-list__breadcrumbs-item");
+
+    if (!div.is(e.target) && div.has(e.target).length === 0) {
+      $(".product-list__breadcrumbs-item").removeClass('active');
+    }
+
+    ;
+  });
 });
