@@ -2,7 +2,7 @@
 
 $(document).on('ready', function () {
   // GSAP scroll effect
-  var skewSetter = gsap.quickSetter(".it", "skewY", "deg");
+  var skewSetter = gsap.quickSetter(".skew", "skewY", "deg");
   var proxy = {
     skew: 0
   };
