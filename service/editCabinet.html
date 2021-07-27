@@ -9,7 +9,12 @@
   </head>
   <body>
     <header class="header__cabinet"> 
-      <div class="container"> <img class="header__cabinet-logo" src="assets/images/logo.png" alt="Логотип">
+      <div class="container"> 
+        <div class="logo-wrapper">
+          <svg class="icon icon-logo header__cabinet-logo">
+            <use xlink:href="assets/images/svg/symbol/sprite.svg#logo"></use>
+          </svg>
+        </div>
         <div class="cabinet"><span>Привет, &nbsp;</span>
           <div class="cabinet__user"><span class="cabinet__user-name">Константин
               <svg class="icon icon-arrow_down user__arrow-icon">
