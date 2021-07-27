@@ -69,11 +69,22 @@ $(document).on('ready', function () {
       }
 
       var footer_second_left = $('.footer-second__left');
+      var header = $('.header');
       $(footer_second_left).on('mouseleave', function () {
         $('.custom-cursor').css('display', 'flex');
         $('html').css('cursor', 'none');
       });
       $(footer_second_left).on('mouseover', function () {
+        $('.custom-cursor').hide();
+        $('html').css('cursor', 'default');
+      });
+      $(header).on('mouseleave', function () {
+        if (!scrollToDownFlag) {
+          $('.custom-cursor').css('display', 'flex');
+          $('html').css('cursor', 'none');
+        }
+      });
+      $(header).on('mouseover', function () {
         $('.custom-cursor').hide();
         $('html').css('cursor', 'default');
       });

@@ -14,7 +14,7 @@ $(document).on('ready', function () {
         proxy.skew = skew;
         gsap.to(proxy, {
           skew: 0,
-          duration: 1,
+          duration: .5,
           ease: "power3",
           overwrite: true,
           onUpdate: function onUpdate() {
