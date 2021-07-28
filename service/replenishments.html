@@ -101,7 +101,7 @@
                 </ul>
               </div>
             </div>
-            <div class="sort"><span>Сортировать: &nbsp;</span>
+            <div class="sort"><span>Сортировка: &nbsp;</span>
               <div class="customSelect"><span class="customSelect__active">По умолчанию</span>
                 <svg class="icon icon-caret_down customSelect-icon">
                   <use xlink:href="assets/images/svg/symbol/sprite.svg#caret_down"></use>
@@ -459,11 +459,11 @@
           </p>
         </div>
         <div class="cabinet__wrapper">
-          <svg class="icon icon-circle_arrow replace__cabinet-icon">
+          <svg class="icon icon-circle_arrow replace__cabinet-icon js-replace__cabinet">
             <use xlink:href="assets/images/svg/symbol/sprite.svg#circle_arrow"></use>
           </svg>
           <div class="modal__cabinet"> <span class="cabinet__text">Выберите кабинет списания</span>
-            <div class="select js-select">
+            <div class="select js-select" id="block-top">
               <div class="select__cabinet">
                 <div class="select__cabinet-name">
                   <svg class="icon icon-green_ellipse modal__cabinet-icon">
@@ -516,7 +516,7 @@
             </div>
           </div>
           <div class="modal__cabinet"> <span class="cabinet__text">Выберите кабинет пополнения</span>
-            <div class="select js-select">   
+            <div class="select js-select" id="block-bottom">
               <div class="select__cabinet">
                 <div class="select__cabinet-name"> 
                   <svg class="icon icon-green_ellipse modal__cabinet-icon--yellow">
@@ -569,10 +569,11 @@
             </div>
           </div>
         </div>
-        <div class="sum__replenishment"> 
+        <div class="sum__replenishment js-sum__replenishment">
+          <input class="sum__replenishment-input js-sum__replenishment-input" type="number" id="input">
           <svg class="icon icon-arrows sum__replenishment-icon">
             <use xlink:href="assets/images/svg/symbol/sprite.svg#arrows"></use>
-          </svg>56 000 &#8381;
+          </svg><span class="text"></span>&#8381;
           <svg class="icon icon-note error-icon">
             <use xlink:href="assets/images/svg/symbol/sprite.svg#note"></use>
           </svg>

@@ -83,5 +83,39 @@ $(document).on("ready", function () {
     }
   }
 
-  $(selectEl).on("click", toggleSelect);
+  ;
+  $(selectEl).on("click", toggleSelect); //перевод бюджета
+
+  var inputEl = $(".js-sum__replenishment-input");
+  var customInputEl = $(".js-sum__replenishment .text");
+  $(inputEl).on("input", test);
+
+  function test(e) {
+    var a = '';
+    a = e.target.value;
+    $(customInputEl).text(a);
+  }
+
+  ; //ограничитель количества вводимых символов в input
+
+  var max_chars = 10;
+  $(inputEl).keydown(function (e) {
+    if ($(this).val().length >= max_chars) {
+      $(this).val($(this).val().substr(0, max_chars));
+    }
+  });
+  $(inputEl).keyup(function (e) {
+    if ($(this).val().length >= max_chars) {
+      $(this).val($(this).val().substr(0, max_chars));
+    }
+  }); //смена кабинетов местами
+
+  var replaceCabinetEl = $(".js-replace__cabinet");
+  $(replaceCabinetEl).click(function () {
+    var left = $('#block-top > *');
+    var right = $('#block-bottom > *');
+    $('#block-top').append(right);
+    $('#block-bottom').append(left);
+    return false;
+  });
 });

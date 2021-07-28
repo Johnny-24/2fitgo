@@ -8,10 +8,16 @@
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
   </head>
   <body>
-    <div class="landing-header"><a class="landing-header_logo" href="#">НАЗВАНИЕ СЕРВИСА</a>
+    <div class="landing-header"><a class="landing-header_logo" href="#">
+        <svg class="icon icon-logo header__cabinet-logo">
+          <use xlink:href="assets/images/svg/symbol/sprite.svg#logo"></use>
+        </svg></a>
       <nav class="landing-nav"><a class="landing-header_menu soft-scroll" href="#additional-information">Преимущества</a><a class="landing-header_menu soft-scroll" href="#advantages">Способы пополнения</a><a class="landing-header_menu soft-scroll" href="#footer-landing">Контакты</a></nav><a class="landing-header_button open-modal" href="#login">Войти в аккаунт</a>
     </div>
-    <div class="mobile-landing-header"><a class="landing-header_logo" href="#">НАЗВАНИЕ СЕРВИСА</a>
+    <div class="mobile-landing-header"><a class="landing-header_logo" href="#">
+        <svg class="icon icon-logo header__cabinet-logo">
+          <use xlink:href="assets/images/svg/symbol/sprite.svg#logo"></use>
+        </svg></a>
       <div class="mobile-landing-header__right"><a class="mobile-landing-header__login open-modal" href="#login">
           <svg class="icon icon-user-fill user-ico">
             <use xlink:href="assets/images/svg/symbol/sprite.svg#user-fill"></use>
@@ -161,12 +167,15 @@
       </div>
     </div>
     <div class="additional-information_input__block container">
-      <div class="additional-information_input__mobile">Начните выгодно пополнять<br>рекламные кампании в интернете</div><span class="additional-information_input">Начните выгодно пополнять рекламные кампании в интернете</span>
-      <button class="btn-oval">Начать работу
-        <svg class="icon icon-rightArrow icon-arrow">
-          <use xlink:href="assets/images/svg/symbol/sprite.svg#rightArrow"></use>
-        </svg>
-      </button>
+      <div class="additional-information_input__mobile">Начните выгодно пополнять<br>рекламные кампании в интернете</div>
+      <div class="additional-information_input">
+        <div class="additional-information_input_text">Начните выгодно пополнять рекламные кампании в интернете</div>
+        <button class="btn-oval">Начать работу
+          <svg class="icon icon-rightArrow icon-arrow">
+            <use xlink:href="assets/images/svg/symbol/sprite.svg#rightArrow"></use>
+          </svg>
+        </button>
+      </div>
     </div>
     <div class="advantages" id="advantages">
       <div class="advantages-header">Пополняйте кампании </br><a class="advantages-header_link" href="#">удобным для вас</a>способом</div>

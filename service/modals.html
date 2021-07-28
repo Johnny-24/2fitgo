@@ -8,13 +8,28 @@
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
   </head>
   <body>
-    <header class="header__cabinet"> 
-      <div class="container"> 
-        <div class="logo-wrapper">
-          <svg class="icon icon-logo header__cabinet-logo">
-            <use xlink:href="assets/images/svg/symbol/sprite.svg#logo"></use>
-          </svg>
-        </div>
+    <header class="header">
+      <div class="container">
+        <nav class="header__menu">
+          <ul class="header__list">
+            <li class="header__list-item"><a class="header__list-link" href="personalArea.html">
+                <svg class="icon icon-user header__list-icon">
+                  <use xlink:href="assets/images/svg/symbol/sprite.svg#user"></use>
+                </svg><span>Кабинеты</span></a></li>
+            <li class="header__list-item"><a class="header__list-link" href="replenishments.html">
+                <svg class="icon icon-data header__list-icon">
+                  <use xlink:href="assets/images/svg/symbol/sprite.svg#data"></use>
+                </svg><span>Пополнения</span></a></li>
+            <li class="header__list-item active"><a class="header__list-link" href="reports.html">
+                <svg class="icon icon-line_chart_up header__list-icon">
+                  <use xlink:href="assets/images/svg/symbol/sprite.svg#line_chart_up"></use>
+                </svg><span>Отчеты</span></a></li>
+            <li class="header__list-item"><a class="header__list-link open-modal" href="#">
+                <svg class="icon icon-tools header__list-icon">
+                  <use xlink:href="assets/images/svg/symbol/sprite.svg#tools"></use>
+                </svg><span>Инструменты</span></a></li>
+          </ul>
+        </nav>
         <div class="cabinet"><span>Привет, &nbsp;</span>
           <div class="cabinet__user"><span class="cabinet__user-name">Константин
               <svg class="icon icon-arrow_down user__arrow-icon">
@@ -26,15 +41,7 @@
         </div>
       </div>
     </header>
-    <main class="main"> 
-      <div class="container emptyCabinet">
-        <h2 class="emptyCabinet__heading">
-           У вас пока нет привязанных кабинетов. <br>
-          Самое время приступить
-        </h2>
-        <div class="login-modal_block__social"> <a class="modal-social_button" href="#"><img class="modal__icon myTarget__social-icon" src="assets/images/MyTarget.svg" alt="">Войти через MyTarget</a><a class="modal-social_button modal-social_button--blue" href="#"><img class="modal__icon" src="assets/images/vk.svg" alt="">Войти через ВКонтакте</a></div>
-      </div>
-    </main>
+    <main class="main main-modal"><a class="btn open-modal" href="#signUp">Регистрация</a><br><br><br><a class="btn open-modal" href="#waitSignUp">Завершение Регистрации</a><br><br><br><a class="btn open-modal" href="#completeSignUp">Email подтвержден</a><br><br><br><a class="btn open-modal" href="#enterAccount">Войти в аккаунт</a></main>
     <footer class="footer">
       <div class="container">
         <h2 class="footer__heading">ООО “ВТаргете”</h2>
