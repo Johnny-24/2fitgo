@@ -30,7 +30,7 @@
                 </svg><span>Инструменты</span></a></li>
           </ul>
         </nav>
-        <div class="cabinet"><span>Привет, &nbsp;</span>
+        <div class="cabinet"><span class="cabinet__hello">Привет, &nbsp;</span>
           <div class="cabinet__user"><span class="cabinet__user-name">Константин
               <svg class="icon icon-arrow_down user__arrow-icon">
                 <use xlink:href="assets/images/svg/symbol/sprite.svg#arrow_down"></use>
@@ -360,7 +360,7 @@
                   <use xlink:href="assets/images/svg/symbol/sprite.svg#green_ellipse"></use>
                 </svg>
                 <p class="select__cabinet-text">
-                   ADR-ANQ-PERVY-LS-1S LS Школа
+                  ADR-ANQ-PERVY-LS-1S LS Школа
                   стройной жизни Никон (Скляр
                 </p>
                 <svg class="icon icon-caret_down select__cabinet-icon">
@@ -368,14 +368,14 @@
                 </svg>
               </div>
             </div>
-            <ul class="select__hidden"> 
+            <ul class="select__hidden">
               <li class="select__cabinet">
                 <div class="select__cabinet-name">
                   <svg class="icon icon-green_ellipse modal__cabinet-icon">
                     <use xlink:href="assets/images/svg/symbol/sprite.svg#green_ellipse"></use>
                   </svg>
                   <p class="select__cabinet-text">
-                     ADR-ANQ-PERVY-LS-1S LS Школа
+                    ADR-ANQ-PERVY-LS-1S LS Школа
                     стройной жизни Никон (Скляр
                   </p>
                 </div>
@@ -386,7 +386,7 @@
                     <use xlink:href="assets/images/svg/symbol/sprite.svg#green_ellipse"></use>
                   </svg>
                   <p class="select__cabinet-text">
-                     ADR-ANQ-PERVY-LS-1S LS Школа
+                    ADR-ANQ-PERVY-LS-1S LS Школа
                     стройной жизни Никон (Скляр
                   </p>
                 </div>
@@ -397,7 +397,7 @@
                     <use xlink:href="assets/images/svg/symbol/sprite.svg#green_ellipse"></use>
                   </svg>
                   <p class="select__cabinet-text">
-                     ADR-ANQ-PERVY-LS-1S LS Школа
+                    ADR-ANQ-PERVY-LS-1S LS Школа
                     стройной жизни Никон (Скляр
                   </p>
                 </div>
@@ -406,17 +406,17 @@
           </div>
         </div>
         <form action="#" method="get">
-          <input class="sum" type="text" placeholder="Сумма пополнения">
+          <input class="sum" type="number" placeholder="Сумма пополнения">
           <input class="email" type="email" placeholder="Электронная почта">
-          <div class="agreement">   
+          <div class="agreement">
             <label class="switch">
-              <input type="checkbox"><span class="slider"></span>
+              <input type="checkbox" id="agreement1"><span class="slider"></span>
             </label>
             <p class="agreement__text">Подтверждаю ознакомление и принимаю <a href="#">все условия </a>договора-оферты</p>
           </div>
-          <div class="agreement"> 
+          <div class="agreement">
             <label class="switch">
-              <input type="checkbox"><span class="slider"></span>
+              <input type="checkbox" id="agreement2"><span class="slider"></span>
             </label>
             <p class="agreement__text">Подтверждаю ознакомление и принимаю <a href="#">правила размещения рекламных объявлений </a>  в ВКонтакте</p>
           </div>
@@ -425,23 +425,20 @@
           <tr class="modal__table-row">
             <td class="modal__table-text">
                Сумма пополнения</td>
-            <td class="modal__table-sum">
-               55 000 &#8381;</td>
+            <td class="modal__table-sum"><span class="modal__table-summa">0</span>&#8381;</td>
           </tr>
           <tr class="modal__table-row"> 
             <td class="modal__table-text">
                Бонусы </td>
-            <td class="modal__table-sum">
-               5 500 &#8381;</td>
+            <td class="modal__table-sum"><span class="span modal__table-bonus">5500</span>&#8381;</td>
           </tr>
           <tr class="modal__table-row"> 
             <td class="modal__table-text">
                Итого к зачислению</td>
-            <td class="modal__table-sum total-sum">
-               60 500 &#8381;</td>
+            <td class="modal__table-sum total-sum"><span class="span modal__table-total">0</span>&#8381;</td>
           </tr>
         </table>
-        <button class="replenish-btn">Пополнить</button>
+        <button class="replenish-btn" disabled>Пополнить</button>
       </div>
     </div>
     <div class="modal" id="transfer">
@@ -472,7 +469,7 @@
                   <svg class="icon icon-caret_down select__cabinet-icon">
                     <use xlink:href="assets/images/svg/symbol/sprite.svg#caret_down"></use>
                   </svg>
-                </div><span class="select__cabinet-sum">55 000 &#8381;</span>
+                </div><span class="select__cabinet-sum"><span>55 000 </span>&#8381;</span>
               </div>
               <ul class="select__hidden"> 
                 <li class="select__cabinet">
@@ -525,7 +522,7 @@
                   <svg class="icon icon-caret_down select__cabinet-icon">
                     <use xlink:href="assets/images/svg/symbol/sprite.svg#caret_down"></use>
                   </svg>
-                </div><span class="select__cabinet-sum">2 130 &#8381;</span>
+                </div><span class="select__cabinet-sum"><span>2 130 </span>&#8381;</span>
               </div>
               <ul class="select__hidden"> 
                 <li class="select__cabinet">
@@ -569,12 +566,12 @@
           <input class="sum__replenishment-input js-sum__replenishment-input" type="number" id="input">
           <svg class="icon icon-arrows sum__replenishment-icon">
             <use xlink:href="assets/images/svg/symbol/sprite.svg#arrows"></use>
-          </svg><span class="text"></span>&#8381;
+          </svg><span class="text"></span>&nbsp; &#8381;
           <svg class="icon icon-note error-icon">
             <use xlink:href="assets/images/svg/symbol/sprite.svg#note"></use>
           </svg>
         </div>
-        <p class="error__text">Сумма перевода больше, чем доступно в кабинете</p>
+        <p class="error__text error__text-hidden">Сумма перевода больше, чем доступно в кабинете</p>
         <button class="transfer-btn">Перевести</button>
       </div>
     </div>
@@ -593,7 +590,14 @@
           <div class="user-item"> <img class="user-item_avatar" src="assets/images/user_photo.jpg" alt="">
             <div class="user-item_info">
               <div class="user-item_name--add">Артур Абдурашитов</div>
-              <div class="user-item_observer">Наблюдатель<img class="chevron" src="assets/images/chevron_down.svg" alt=""></div>
+              <div class="user-item_observer js-dropdown">Наблюдатель<img class="chevron" src="assets/images/chevron_down.svg" alt="">
+                <ul class="user-item_observer--dropdown"> 
+                  <li class="dropdown-item">
+                     Владелец</li>
+                  <li class="dropdown-item">
+                     Наблюдатель</li>
+                </ul>
+              </div>
             </div><a class="close-icon_link" href="#delete"> <img class="close_icon" src="assets/images/close_big.svg" alt=""></a>
           </div>
           <div class="modal_vk">
@@ -626,7 +630,7 @@
         <div class="modal__close"><img class="modal__close_icon" src="assets/images/close_big.svg" alt=""></div>
         <div class="modal__header">Переименовать кабинет</div>
         <input class="modal-cabinet" type="text" maxlength="60" placeholder="ANQ-PERVY-LS-1S LS Школа стройной жизни Никон " data-field="item">
-        <div class="counter-text">Символов:</div><span class="modal-counter" data-field="target"></span>
+        <div class="counter-text">Символов:</div><span class="modal-counter" data-field="target">0</span>
         <div class="counter-number">/60</div><img class="modal-pencil" src="assets/images/edit.svg" alt="">
         <button class="modal-button_accept">ПEРЕИМЕНОВАТЬ</button>
       </div>

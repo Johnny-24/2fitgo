@@ -98,13 +98,15 @@ $(document).on("ready", function () {
 
   ; //ограничитель количества вводимых символов в input
 
-  var max_chars = 10;
-  $(inputEl).keydown(function (e) {
-    if ($(this).val().length >= max_chars) {
-      $(this).val($(this).val().substr(0, max_chars));
-    }
-  });
+  var max_chars = 10; // $(inputEl).keydown( function(e){
+  //     if ($(this).val().length >= max_chars) { 
+  //         $(this).val($(this).val().substr(0, max_chars));
+  //     }
+  // });
+
   $(inputEl).keyup(function (e) {
+    showAlert();
+
     if ($(this).val().length >= max_chars) {
       $(this).val($(this).val().substr(0, max_chars));
     }
@@ -112,10 +114,70 @@ $(document).on("ready", function () {
 
   var replaceCabinetEl = $(".js-replace__cabinet");
   $(replaceCabinetEl).click(function () {
-    var left = $('#block-top > *');
-    var right = $('#block-bottom > *');
-    $('#block-top').append(right);
-    $('#block-bottom').append(left);
+    var top = $('#block-top > *');
+    var bottom = $('#block-bottom > *');
+    $('#block-top').append(bottom);
+    $('#block-bottom').append(top);
     return false;
-  });
+  }); // alert
+
+  function showAlert() {
+    var replenishmentSumEl = $('.js-sum__replenishment-input').val();
+    var cabinetSumEl = $('#block-top .select__cabinet-sum span').text();
+
+    if (parseInt(replenishmentSumEl) > parseInt(cabinetSumEl.replace(/\s+/g, ''))) {
+      $('.error-icon').show();
+      $('.error__text').removeClass('error__text-hidden');
+    } else {
+      $('.error-icon').hide();
+      $('.error__text').addClass('error__text-hidden');
+    }
+  }
+
+  ; // Выпадающие роли
+
+  var dropdownEl = $(".js-dropdown");
+
+  function toggleDropdown() {
+    if ($(dropdownEl).hasClass("visible")) {
+      $(dropdownEl).removeClass("visible");
+    } else {
+      $(this).addClass("visible");
+    }
+  }
+
+  ;
+  $(dropdownEl).on("click", toggleDropdown); // Кнопка в модалке пополнения кабинета
+
+  var replenishmentsSum = $('#replenishments .sum');
+  var replenishmentsEmail = $('#replenishments .email');
+  var replenishmentsAgreement1 = $('#agreement1');
+  var replenishmentsAgreement2 = $('#agreement2');
+  var replenishBtn = $('.replenish-btn');
+  var replenishmentsSumField = $('.modal__table-summa');
+  var replenishmentsSumTotal = $('.span.modal__table-total');
+  var replenishmentsSumBonus = $('.span.modal__table-bonus');
+  $(replenishmentsSumTotal).text($(replenishmentsSumBonus).text());
+
+  function replenishments() {
+    $(replenishmentsSumField).text($(replenishmentsSum).val());
+
+    if ($(replenishmentsSum).val() < 1) {
+      $(replenishmentsSumField).text(0);
+    }
+
+    var summ = parseInt($(replenishmentsSumField).text()) + parseInt($(replenishmentsSumBonus).text());
+    $(replenishmentsSumTotal).text(summ);
+
+    if (parseInt($(replenishmentsSum).val()[0]) > 0 && $(replenishmentsEmail).val().trim().length > 0 && $(replenishmentsAgreement1).is(":checked") && $(replenishmentsAgreement2).is(":checked")) {
+      $(replenishBtn).attr('disabled', false);
+    } else {
+      $(replenishBtn).attr('disabled', true);
+    }
+  }
+
+  $(replenishmentsSum).on('input', replenishments);
+  $(replenishmentsEmail).on('input', replenishments);
+  $(replenishmentsAgreement1).on('change', replenishments);
+  $(replenishmentsAgreement2).on('change', replenishments);
 });
