@@ -256,7 +256,14 @@
           <div class="user-item"> <img class="user-item_avatar" src="assets/images/user_photo.jpg" alt="">
             <div class="user-item_info">
               <div class="user-item_name--add">Артур Абдурашитов</div>
-              <div class="user-item_observer">Наблюдатель<img class="chevron" src="assets/images/chevron_down.svg" alt=""></div>
+              <div class="user-item_observer js-dropdown">Наблюдатель<img class="chevron" src="assets/images/chevron_down.svg" alt="">
+                <ul class="user-item_observer--dropdown"> 
+                  <li class="dropdown-item">
+                     Владелец</li>
+                  <li class="dropdown-item">
+                     Наблюдатель</li>
+                </ul>
+              </div>
             </div><a class="close-icon_link" href="#delete"> <img class="close_icon" src="assets/images/close_big.svg" alt=""></a>
           </div>
           <div class="modal_vk">
@@ -289,9 +296,9 @@
         <div class="modal__close"><img class="modal__close_icon" src="assets/images/close_big.svg" alt=""></div>
         <div class="modal__header">Переименовать кабинет</div>
         <input class="modal-cabinet" type="text" maxlength="60" placeholder="ANQ-PERVY-LS-1S LS Школа стройной жизни Никон " data-field="item">
-        <div class="counter-text">Символов:</div><span class="modal-counter" data-field="target"></span>
+        <div class="counter-text">Символов:</div><span class="modal-counter" data-field="target">0</span>
         <div class="counter-number">/60</div><img class="modal-pencil" src="assets/images/edit.svg" alt="">
-        <button class="modal-button_accept">ПEРЕИМЕНОВАТЬ</button>
+        <button class="modal-button_accept">Переименовать</button>
       </div>
     </div>
     <div class="menu">
