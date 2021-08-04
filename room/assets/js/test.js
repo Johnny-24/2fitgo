@@ -54,21 +54,29 @@ $(document).on('ready', function () {
   var mainTitleHeight = $('.main-section__title').height();
   var mainTitlePositionTop = $('.main-section__title').offset().top;
   var mainTitlePositionBottom = mainTitlePositionTop + mainTitleHeight;
-  var tl = gsap.timeline({
+  var GMainTitle = gsap.timeline({
     scrollTrigger: {
       trigger: ".main-photos",
       start: 'top ' + mainTitlePositionBottom + 'px',
       end: 'bottom ' + mainTitlePositionTop + 'px ',
       // scrub: true,
       toggleActions: "play reverse play reverse",
-      markers: true
+      markers: true,
+      onEnter: function onEnter() {
+        return $('.main-section__title').addClass('active');
+      },
+      onLeave: function onLeave() {
+        return $('.main-section__title').removeClass('active');
+      },
+      onEnterBack: function onEnterBack() {
+        return $('.main-section__title').addClass('active');
+      },
+      onLeaveBack: function onLeaveBack() {
+        return $('.main-section__title').removeClass('active');
+      }
     }
   });
-  tl.to(".main-section__title", {
-    opacity: .4,
-    scale: .8,
-    duration: .5
-  }); //
+  GMainTitle.to(".main-section__title", {}); //
   //
   //
   // const lastPhotoHeight = $('.main-photos__item--last').height();
