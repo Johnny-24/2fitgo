@@ -1,14 +1,38 @@
 "use strict";
 
 $(document).on('ready', function () {
-  // GSAP scroll effect
+  // Smooth Scroll
+  gsap.registerPlugin(ScrollTrigger);
+  var container = document.getElementById("scroll-container");
+
+  function setHeight() {
+    var height = container.clientHeight;
+    document.body.style.height = height + "px";
+  }
+
+  ScrollTrigger.addEventListener("refreshInit", setHeight);
+  gsap.to(container, {
+    y: function y() {
+      return -(container.getBoundingClientRect().height - document.documentElement.clientHeight);
+    },
+    ease: "none",
+    scrollTrigger: {
+      trigger: document.body,
+      start: "top top",
+      end: "bottom bottom",
+      scrub: 1,
+      invalidateOnRefresh: true
+    }
+  }); //-------------
+  // Scroll skew effect
+
   var skewSetter = gsap.quickSetter(".skew", "skewY", "deg");
   var proxy = {
     skew: 0
   };
   ScrollTrigger.create({
     onUpdate: function onUpdate(self) {
-      var skew = self.getVelocity() / -1000;
+      var skew = self.getVelocity() / -600;
 
       if (Math.abs(skew) > Math.abs(proxy.skew)) {
         proxy.skew = skew;
@@ -23,38 +47,62 @@ $(document).on('ready', function () {
         });
       }
     }
-  }); // scroll main block
+  }); //-------------
+  // Vars
 
-  var mainTitle = $('.main-section__title');
-  var hScreen = $('.main-section').height();
-  var hMainTitle = $(mainTitle).height();
-  var mainPhotos = $('.main-photos__item');
-  var footer = $('.footer');
-  var footerSecond = $('.footer-second');
-  var cursorElBlock = $('.main-photos__item').eq(-1);
-  var cursorElBlockH = $(cursorElBlock).offset().top - hScreen;
-  var lastScreenPosition = $('.main-photos__item').eq(-1);
-  var endPOsition = $(lastScreenPosition).offset().top + $(lastScreenPosition).height();
-  var scrollToDownFlag = true;
-  var lastPhotoPosition = $(mainPhotos).eq(mainPhotos.length - 2).offset().top + hMainTitle;
-  var indent = hScreen - (hScreen / 2 + hMainTitle / 2);
-  $(window).on('scroll', function () {
-    // title
-    if (pageYOffset < indent || pageYOffset > lastPhotoPosition) {
-      $(mainTitle).removeClass('active');
-    } else {
-      $(mainTitle).addClass('active');
-    } //footer
+  var mainTitleHeight = $('.main-title').height();
+  var mainTitlePositionTop = $('.main-title').offset().top;
+  var mainTitlePositionBottom = mainTitlePositionTop + mainTitleHeight; // Title effect
 
-
-    if (pageYOffset > lastPhotoPosition) {
-      $(footerSecond).addClass('active');
-      $(footer).addClass('hide');
-      $('.main-photos__item').addClass('fly');
-    } else {
-      $(footerSecond).removeClass('active');
-      $(footer).removeClass('hide');
-      $('.main-photos__item').removeClass('fly');
+  var GMainTitle = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".main-photos",
+      start: 'top ' + mainTitlePositionBottom + 'px',
+      end: 'bottom ' + mainTitlePositionTop + 'px ',
+      toggleActions: "play reverse play reverse",
+      onEnter: function onEnter() {
+        return $('.main-title').addClass('active');
+      },
+      onLeave: function onLeave() {
+        return $('.main-title').removeClass('active');
+      },
+      onEnterBack: function onEnterBack() {
+        return $('.main-title').addClass('active');
+      },
+      onLeaveBack: function onLeaveBack() {
+        return $('.main-title').removeClass('active');
+      }
     }
   });
+  GMainTitle.to(".main-title", {}); // Footer effect
+
+  var GMainFooter = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".main-photos",
+      start: 'bottom ' + mainTitlePositionTop + 'px',
+      end: '+=1 top',
+      toggleActions: "play reverse play reverse",
+      onEnter: function onEnter() {
+        $('.footer').addClass('hide');
+        $('.footer-second').addClass('active');
+        $('.main-photos__item').addClass('fly');
+      },
+      onLeave: function onLeave() {
+        $('.footer').removeClass('hide');
+        $('.footer-second').removeClass('active');
+        $('.main-photos__item').removeClass('fly');
+      },
+      onEnterBack: function onEnterBack() {
+        $('.footer').addClass('hide');
+        $('.footer-second').addClass('active');
+        $('.main-photos__item').addClass('fly');
+      },
+      onLeaveBack: function onLeaveBack() {
+        $('.footer').removeClass('hide');
+        $('.footer-second').removeClass('active');
+        $('.main-photos__item').removeClass('fly');
+      }
+    }
+  });
+  GMainFooter.to(".footer", {});
 });
