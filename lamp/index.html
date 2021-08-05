@@ -47,8 +47,7 @@
               <li class="main-block__item">Мебель для кинотеатров</li>
               <li class="main-block__item">3D оборудование</li>
               <li class="main-block__item">Лампы для промышленности</li>
-            </ul>
-            <div class="btn btn--long">Заказать запчасть</div>
+            </ul><a class="btn btn--long open-modal" href="#form">Заказать запчасть</a>
           </div>
           <div class="main-block__right">
             <h1 class="main-block__title main-block__title--right">для кинотеатров</h1><img class="main-block__img" src="assets/images/lamp.png">
@@ -64,8 +63,7 @@
             </div>
           </div>
           <div class="main-block__footer-bottom">
-            <div class="container">
-              <div class="btn btn--long">Заказать запчасть</div>
+            <div class="container"><a class="btn btn--long open-modal" href="#form">Заказать запчасть</a>
               <div class="header__contacts header__contacts--footer"><a class="header__phone" href="tel:83432020614">
                   <svg class="icon icon-phone header__phone-ico">
                     <use xlink:href="assets/images/svg/symbol/sprite.svg#phone"></use>
@@ -80,17 +78,17 @@
         <div class="categories container">
           <ul class="categories__list">
             <li class="categories__item"><a class="categories__link" href="catalog-list.html"><span class="categories__header">
-                  <h5 class="categories__title">Лампы для проекторов<img class="categories__title-shield" src="assets/images/shield.png"></h5></span><img class="categories__img" src="assets/images/categoriesList1.png"></a></li>
+                  <h5 class="categories__title">Лампы для проекторов<img class="categories__title-shield" src="assets/images/shield.png"></h5></span><img class="categories__img" src="assets/images/categoriesList1.png"><img class="categories__img categories__img--mobil" src="assets/images/categoriesList1-mobil.png"></a></li>
             <li class="categories__item"><a class="categories__link" href="catalog-list.html"><span class="categories__header">
-                  <h5 class="categories__title">Фильтры для цифровых<br>проекторов</h5></span><img class="categories__img" src="assets/images/categoriesList2.png"></a></li>
+                  <h5 class="categories__title">Фильтры для цифровых<br>проекторов</h5></span><img class="categories__img" src="assets/images/categoriesList2.png"><img class="categories__img categories__img--mobil" src="assets/images/categoriesList2-mobil.png"></a></li>
             <li class="categories__item"><a class="categories__link" href="catalog-list.html"><span class="categories__header">
-                  <h5 class="categories__title">Отражатели</h5></span><img class="categories__img" src="assets/images/categoriesList3.png"></a></li>
+                  <h5 class="categories__title">Отражатели</h5></span><img class="categories__img" src="assets/images/categoriesList3.png"><img class="categories__img categories__img--mobil" src="assets/images/categoriesList3-mobil.png"></a></li>
             <li class="categories__item"><a class="categories__link" href="catalog-list.html"><span class="categories__header">
-                  <h5 class="categories__title">Мебель для кинотеатров</h5></span><img class="categories__img" src="assets/images/categoriesList4.png"></a></li>
+                  <h5 class="categories__title">Мебель для кинотеатров</h5></span><img class="categories__img" src="assets/images/categoriesList4.png"><img class="categories__img categories__img--mobil" src="assets/images/categoriesList4-mobil.png"></a></li>
             <li class="categories__item"><a class="categories__link" href="catalog-list.html"><span class="categories__header">
-                  <h5 class="categories__title">3D оборудование</h5></span><img class="categories__img" src="assets/images/categoriesList5.png"></a></li>
+                  <h5 class="categories__title">3D оборудование</h5></span><img class="categories__img" src="assets/images/categoriesList5.png"><img class="categories__img categories__img--mobil" src="assets/images/categoriesList5-mobil.png"></a></li>
             <li class="categories__item"><a class="categories__link" href="catalog-list.html"><span class="categories__header">
-                  <h5 class="categories__title">Лампы для промышленности</h5></span><img class="categories__img" src="assets/images/categoriesList6.png"></a></li>
+                  <h5 class="categories__title">Лампы для промышленности</h5></span><img class="categories__img" src="assets/images/categoriesList6.png"><img class="categories__img categories__img--mobil" src="assets/images/categoriesList6-mobil.png"></a></li>
           </ul>
         </div>
       </section>
@@ -259,6 +257,92 @@
           <div class="modal__subtitle jcc">Запрос отправлен!<img class="modal__smile" src="assets/images/smile.svg"></div>
           <div class="modal__success">Наши менеджеры свяжутся с вами в ближайшее время</div>
         </div>
+      </div>
+    </div>
+    <div class="modal" id="order">
+      <div class="modal__overlay close-modal"></div>
+      <div class="modal__content">
+        <div class="modal__header">
+          <div class="modal__close close-modal"></div>
+          <div class="modal__title">Чтобы узнать стоимость всего списка на<b>27.04,</b>отправьте запрос и наши менеджеры свяжутся с вами
+            в ближайшее время.
+          </div>
+        </div>
+        <div class="modal__body">
+          <ul class="modal__order-list">
+            <li class="modal__order-item">
+              <div class="modal__order-picture"><img src="assets/images/lamp.png"></div>
+              <div class="modal__order-description">Лампа ксеноновая<br>YUMEX YXL-6000C12</div>
+              <div class="modal__order-counter">
+                <div class="modal__order-minus disabled"></div>
+                <div class="modal__order-num">1</div>
+                <div class="modal__order-plus"></div>
+              </div>
+              <div class="modal__order-del"></div>
+            </li>
+            <li class="modal__order-item">
+              <div class="modal__order-picture"><img src="assets/images/lamp.png"></div>
+              <div class="modal__order-description">Лампа ксеноновая<br>YUMEX YXL-6000C12</div>
+              <div class="modal__order-counter">
+                <div class="modal__order-minus"></div>
+                <div class="modal__order-num">2</div>
+                <div class="modal__order-plus"></div>
+              </div>
+              <div class="modal__order-del"></div>
+            </li>
+          </ul>
+          <div class="modal__order-bottom"><a class="print-link link" href="#">Распечатать</a>
+            <div class="modal__order-total">Всего позиций<b>2</b></div>
+          </div>
+          <button class="btn">Отправить запрос</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="form">
+      <div class="modal__overlay close-modal"></div>
+      <div class="modal__content">
+        <div class="modal__header">
+          <div class="modal__close close-modal"></div>
+          <div class="modal__title">Форма заказа</div>
+          <div class="modal__subtitle">Оставьте данные об оборудовании и наши специалисты подберут для вас нужную деталь.</div>
+        </div>
+        <form class="modal__form">
+          <div class="modal__form-wrap">
+            <div class="modal__form-group">
+              <label class="modal__form-label">Название проектора</label>
+              <input class="input" type="text" required>
+              <svg class="icon icon-check input__check">
+                <use xlink:href="assets/images/svg/symbol/sprite.svg#check"></use>
+              </svg>
+            </div>
+            <div class="modal__form-group">
+              <label class="modal__form-label">Название запчасти</label>
+              <input class="input" type="text" required>
+              <svg class="icon icon-check input__check">
+                <use xlink:href="assets/images/svg/symbol/sprite.svg#check"></use>
+              </svg>
+            </div>
+            <div class="modal__form-group">
+              <label class="modal__form-label">Серийный номер запчасти<br>(Purt number)</label>
+              <input class="input" type="text">
+            </div>
+            <div class="modal__form-group">
+              <label class="modal__form-label">Комментарий</label>
+              <textarea class="textarea"></textarea>
+            </div>
+            <div class="modal__form-group">
+              <label class="modal__form-label">Телефон или e-mail</label>
+              <input class="input" type="text" required>
+              <svg class="icon icon-check input__check">
+                <use xlink:href="assets/images/svg/symbol/sprite.svg#check"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal__footer">
+            <button class="btn" type="submit">Отправить</button>
+            <div class="form__politic">Нажимая на кнопку, вы даете согласиена обработку персональных данных и соглашаетесь с<a class="link" href="#">политикой конфиденциальности</a></div>
+          </div>
+        </form>
       </div>
     </div>
     <script src="assets/js/jquery.js"></script>
