@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Delivery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="css/stories.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@21.8.0/dist/css/suggestions.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@21.8.0/dist/js/jquery.suggestions.min.js"></script>
+</head>
+<body class="hidden">
+    <input type="radio" name="point" id="slide5" hidden >
+    <section class="modal-stories">
+        <input type="radio" name="point" id="slide1" checked>
+        <input type="radio" name="point" id="slide2" >
+        <input type="radio" name="point" id="slide3" >
+        <input type="radio" name="point" id="slide4">
+        <div class="slider">
+            <div class="slides slide1">
+
+                <div class="modal-content">
+                    <div class="modal-slider-top">
+                        <span class="active"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- /.modal-slider-top -->
+                    <div class="modal-slider-logo">
+                        <img src="img/logo-modal.svg" alt="">
+                    </div>
+                    <!-- /.modal-slider-logo -->
+                    <h2 class="modal-slogan">
+                        <span>SEASONS</span> — это новый формат рынка на колёсах
+                    </h2>
+                    <!-- /.modal-slogan -->
+                    <div class="modal-features">
+                        <div class="modal-features-block">
+                            <img src="img/features/1.svg" alt="">
+                        </div>
+
+                        <span>
+                            Всегда самые свежие сезонные продукты
+                        </span>
+                    </div>
+                    <!-- /.modal-features -->
+                    <div class="modal-features">
+                        <div class="modal-features-block">
+                            <img src="img/features/2.svg" alt="">
+                        </div>
+                        <span>
+                            Цены ниже магазинных в среднем на 15%
+                        </span>
+                    </div>
+                    <!-- /.modal-features -->
+                    <div class="modal-features">
+                        <div class="modal-features-block">
+                            <img src="img/features/3.svg" alt="">
+                        </div>
+                        <span>
+                            Доставка в течение 15 минут
+                        </span>
+                    </div>
+                    <!-- /.modal-features -->
+                </div>
+                <!-- /.modal-content -->
+
+
+                <label for="slide2" class="modal-btn btn btn-yellow">Дальше</label>
+            </div>
+            <!-- .slides.slide1 -->
+            <div class="slides slide2">
+
+                <div class="modal-content">
+                    <div class="modal-slider-top">
+                        <span></span>
+                        <span class="active"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- /.modal-slider-top -->
+                    <div class="modal-title">
+                        Что продаём
+                    </div>
+                    <!-- /.modal-title -->
+                    <div class="modal-subtitle">
+                        Мы продаем то, что нет в сетях. <br>
+                        А это - самые свежие сезонные продукты.
+                    </div>
+                    <!-- /.modal-subtitle -->
+                    <ul class="modal-list">
+                        <li>
+                            Фрукты и ягоды
+                        </li>
+                        <li>
+                            Овощи и зелень
+                        </li>
+                        <li>
+                            Орехи и сухофрукты
+                        </li>
+                    </ul>
+                    <!-- /.modal-list -->
+
+                </div>
+                <!-- /.modal-content -->
+
+                <label for="slide3" class="modal-btn btn">Дальше</label>
+            </div>
+            <!-- .slides.slide2 -->
+            <div class="slides slide3">
+                <div class="modal-content">
+                    <div class="modal-slider-top">
+                        <span></span>
+                        <span></span>
+                        <span class="active"></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- /.modal-slider-top -->
+                    <div class="modal-title">
+                        Выберите адрес
+                    </div>
+                    <!-- /.modal-title -->
+                    <div class="modal-subtitle">
+                        Введите адрес, куда нужно
+                        доставить продукты и мы сами
+                        подберем ближайший к вам грузовик
+                    </div>
+                    <!-- /.modal-subtitle -->
+                </div>
+                <!-- /.modal-content -->
+                <label for="slide4" class="modal-btn btn btn-primary">Дальше</label>
+            </div>
+            <!-- slides.slide3 -->
+            <div class="slides slide4">
+                <div class="modal-content">
+                    <div class="modal-slider-top">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span class="active"></span>
+                        <span></span>
+                    </div>
+                    <!-- /.modal-slider-top -->
+                    <div class="modal-title">
+                        Веберите товар
+                    </div>
+                    <!-- /.modal-title -->
+                    <div class="modal-subtitle">
+                        Выберите и оплатите товар, после наш грузовик доставит заказ прямо
+                        к вашей двери через <span>15 минут</span>
+                    </div>
+                    <!-- /.modal-subtitle -->
+                </div>
+                <!-- /.modal-content -->
+                <label for="slide5" class="modal-btn btn btn-primary body-hidden">Дальше</label>
+            </div>
+            <!-- .slides.slide4 -->
+        </div>
+    </section>
+    <!-- /.modal-stories -->
+    <header class="header">
+        <a href="/" class="header-logo">
+            <img src="img/logo.svg" alt="">
+            <span>SEASONS</span>
+        </a>
+        <!-- /.header-logo -->
+        <div class="header-tool">
+            <div class="header-cart">
+                <a href="/cart-empty.html"><img src="img/shopping-cart.svg" alt=""></a>
+
+            </div>
+            <!-- /.header-cart -->
+            <div class="hamburger-menu header-menu">
+                <input id="menu__toggle" type="checkbox" hidden />
+                <label class="header-menu" for="menu__toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <div class="menu__box">
+                    <ul class="header-list">
+                        <li><a class="menu__item" href="/catalog.html">Каталог</a></li>
+                        <li><a class="menu__item" href="#">Пользовательское соглашение</a></li>
+                    </ul>
+                </div>
+                <!-- /.menu__box -->
+
+            </div>
+        </div>
+        <!-- /.header-tool -->
+    </header>
+    <!-- /.header -->
+
+
+    <section class="map">
+        <input type="checkbox" hidden id="next-page">
+        <img src="img/gif1.gif" alt="" class="map-img">
+        <div class="map-bottom">
+            <div class="input-wrap">
+                <input id="address" name="address" class="map-input" placeholder="Выбрать адрес" type="text" />
+            </div>
+
+
+            <button class="btn btn-grey finish">Готово</button>
+            <label for="next-page" class="btn btn-primary finish">Готово</label>
+        </div>
+        <!-- /.map-bottom -->
+        <div class="map-bottom map-page">
+            <h3 class="map-title">
+                Подбираем для вас ближайший грузовик
+            </h3>
+            <!-- /.map-title -->
+            <div class="map-loader">
+                <span></span>
+            </div>
+            <!-- /.map-loader -->
+        </div>
+        <section class="citiesHelers">
+            <input id="city" name="city" type="text" value="г Москва" />
+        </section>
+        <!-- /.map-bottom -->
+    </section>
+    <!-- /.map -->
+
+    <script>
+        let btnNextPage = document.querySelector('#next-page')
+        let mapLoader = document.querySelector('.map-loader')
+        function newpage() {
+            window.location.href = '/catalog.html'
+        }
+        btnNextPage.addEventListener('click', () => {
+            mapLoader.classList.add('active')
+            localStorage.setItem('address', $("#address").val())
+            setTimeout(newpage, 2900)
+        })
+        let btnHiddenBody = document.querySelector('label.body-hidden');
+
+        console.log(btnHiddenBody)
+        btnHiddenBody.addEventListener('click', () => {
+            document.body.classList.remove('hidden')
+        })
+
+        $("#address").keydown(function() {
+            if($(this).val().length > 0) {
+                $('.btn-grey.finish').hide()
+                $('.btn-primary.finish').show()
+            } else {
+                $('.btn-grey.finish').show()
+                $('.btn-primary.finish').hide()
+            }
+        })
+    </script>
+
+
+<script>
+    $(document).ready(function () {
+        var token = "30857967d6bcd089f8ad7d2e6673df6f8f29c519";
+        $('.btn-primary.finish').hide()
+        function setConstraints(sgt, kladr_id) {
+            var restrict_value = false;
+            var locations = null;
+            if (kladr_id) {
+                locations = { kladr_id: kladr_id };
+                restrict_value = true;
+            }
+            sgt.setOptions({
+                constraints: {
+                    locations: locations
+                },
+                restrict_value: restrict_value
+            });
+        }
+
+        function enforceCity(suggestion) {
+            var sgt = $("#address").suggestions();
+            sgt.clear();
+            if (suggestion) {
+                setConstraints(sgt, suggestion.data.kladr_id);
+            } else {
+                setConstraints(sgt, null);
+            }
+        }
+
+        function restrictAddressValue(suggestion) {
+            var citySgt = $("#city").suggestions();
+            var addressSgt = $("#address").suggestions();
+            if (!citySgt.currentValue) {
+                citySgt.setSuggestion(suggestion);
+                var city_kladr_id = suggestion.data.kladr_id.substr(0, 13);
+                setConstraints(addressSgt, city_kladr_id);
+            }
+        }
+
+        function formatSelected(suggestion) {
+            var addressValue = makeAddressString(suggestion.data);
+            return addressValue;
+        }
+
+        function makeAddressString(address) {
+            return join([
+                address.street_with_type,
+                join([address.house_type, address.house,
+                address.block_type, address.block], " "),
+                join([address.flat_type, address.flat], " ")
+            ]);
+        }
+
+        function join(arr /*, separator */) {
+            var separator = arguments.length > 1 ? arguments[1] : ", ";
+            return arr.filter(function (n) { return n }).join(separator);
+        }
+
+        $("#city").suggestions({
+            token: token,
+            type: "ADDRESS",
+            bounds: "city-settlement",
+            geoLocation: false,
+            onSelect: enforceCity,
+            onSelectNothing: enforceCity
+        });
+
+        $("#address").suggestions({
+            token: token,
+            type: "ADDRESS",
+            onSelect: restrictAddressValue,
+            formatSelected: formatSelected,
+            onSelect: function (suggestion) {
+                console.log(suggestion);
+            }
+        });
+
+        $("#city").suggestions().fixData();
+    });
+</script>
+</body>
+</html>
+
+
+<style>
+    .input-wrap {
+        position: relative;
+    }
+    .suggestions-wrapper {
+        position: absolute;
+        bottom: calc(100% + 10px);
+        width: 100%;
+    }
+    .suggestions-suggestions {
+        bottom: 100%;
+        width: 100%;
+    }
+    .citiesHelers {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+</style>

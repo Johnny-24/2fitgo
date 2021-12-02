@@ -1,0 +1,634 @@
+$Noto: 'Noto Sans'
+$Gotham: 'Gotham Pro'
+    
+
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: $Noto, sans-serif
+    outline: none
+    appearance: none
+
+
+img
+    max-width: 100%
+
+body
+    background-color: #F2F2F2
+    width: 100%
+    max-width: 567px
+    margin: auto
+
+.hidden
+    overflow: hidden
+
+.btn
+    padding: 14px 0
+    text-align: center
+    font-size: 14px
+    line-height: 18px
+    color: #2A2A2F
+    background-color: #fff
+    border-radius: 8px
+    font-weight: 600
+    cursor: pointer
+    border: none
+    width: 100%
+    display: inline-block
+    &-yellow
+        background-color: #FF9E0A
+    &-primary
+        background-color: #8001EF
+        color: #fff
+    &-grey
+        background-color: #C9C9CA
+        color: #fff
+
+
+.modal
+    &-stories
+        .btn
+            padding: 17px 0
+    &-title
+        margin-bottom: 12px
+        font-size: 24px
+        font-weight: 700
+        line-height: 32px
+        color: #2A2A2F
+    &-subtitle
+        margin-bottom: 20px
+        font-size: 16px
+        font-weight: 500
+        line-height: 22px
+        font-family: $Noto, sans-serif
+        color: #2A2A2F
+        span
+            color: #8001EF
+            font-style: italic
+            font-weight: 800
+    &-slider
+        &-top
+            position: absolute
+            padding-left: 20px
+            padding-right: 20px
+            left: 0px
+            top: 10px
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: space-between
+            span
+                width: 100%
+                max-width: calc( 20% - 5px )
+                height: 3px
+                border-radius: 3px
+                background-color: rgba(255,255,255,.5)
+                &.active
+                    background-color: #fff
+        &-logo
+            margin-bottom: 36px
+            text-align: center
+    &-slogan
+        margin-bottom: 31px
+        font-size: 18px
+        line-height: 22px
+        color: #fff
+        font-family: $Gotham, sans-serif
+        font-weight: 500
+        span
+            font-weight: 900
+            font-family: $Gotham, sans-serif
+
+    &-features
+        display: flex
+        align-items: center
+        font-size: 18px
+        font-weight: 500
+        margin-bottom: 16px
+        color: #fff
+        span
+            font-family: $Gotham, sans-serif
+        img
+            margin-right: 10px
+    &-content
+        padding: 70px 16px 16px
+    &-btn
+        position: absolute
+        left: 0px
+        bottom: 16px
+        width: calc( 100% - 32px )
+        margin: 0px 16px
+    &-list
+        padding-left: 20px
+        font-size: 16px
+        line-height: 22px
+        font-family: $Noto, sans-serif
+        color: #fff
+        li
+            margin-bottom: 3px
+    
+
+.slider
+    box-shadow: 0px 0px 12px rgba(138, 173, 177, 0.12)
+
+.slides.slide1
+    .modal
+        &-content
+            padding-top: 113px
+.slides.slide2
+    .modal
+        &-title
+            color: #fff
+        &-subtitle
+            color: #fff
+
+.slides.slide3, .slides.slide4
+    background-size: auto !important
+    background-color: #fff
+    background-position:  bottom -55px center !important
+    .modal-slider-top span
+        background-color: #abacaf80
+        &.active
+            background-color: #ABACAF
+
+
+.header
+    padding: 13px 16px
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background-color: #fff
+    &-list
+        padding: 16px
+        background-color: #fff
+        border-radius: 8px
+        
+    &-logo
+        display: flex
+        align-items: center
+        font-size: 20px
+        font-weight: 700
+        line-height: 26px
+        text-transform: uppercase
+        color: #8001EF
+        img
+            margin-right: 5px
+    &-tool
+        display: flex
+        align-items: center
+    &-cart
+        position: relative
+        display: flex
+        margin-right: 35px
+        cursor: pointer
+        a
+            display: flex
+        &-item
+            position: absolute
+            right: -3px
+            top: -1px
+            width: 14px
+            height: 14px
+            border-radius: 14px
+            background-color: #FF9E0A
+            display: flex
+            align-items: center
+            justify-content: center
+            font-size: 9px
+            line-height: 12px
+            font-weight: 700
+            color: #fff
+    &-menu
+        width: 18px
+        height: 12px
+        display: flex
+        flex-wrap: wrap
+        cursor: pointer
+        .header-menu
+            position: relative
+            z-index: 999
+        span
+            display: inline-block
+            margin-bottom: 3px
+            height: 2px
+            width: 100%
+            border-radius: 3px
+            background-color: #8001EF
+            transition-duration: .25s
+            &:last-child
+                margin-bottom: 0
+    &-list
+        list-style: none
+
+input
+    &::placeholder
+        color: #ABACAF
+
+.map
+    position: relative
+    min-height: calc( 100vh - 52px )
+    &-img
+        min-height: 80vh
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &-bottom
+        min-height: 20vh
+        padding: 16px
+        background-color: #fff
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        .btn
+            margin-bottom: 16px
+            
+    &-input
+        padding: 11px 12px
+        margin-bottom: 16px
+        width: 100%
+        border: none
+        font-size: 14px
+        line-height: 19px
+        border-radius: 8px
+        color: #2A2A2F
+        background-color: #F2F2F2
+    &-title
+        font-size: 18px
+        line-height: 24px
+        text-align: center
+        max-width: 213px
+        margin: auto
+        margin-bottom: 30px
+    &-page
+        padding: 30px 16px
+    &-loader
+        position: relative
+        width: 100%
+        height: 6px
+        background-color: #EDEDED
+        border-radius: 6px
+        
+        span
+            position: absolute
+            left: 0
+            top: 0
+            width: 20%
+            height: 100%
+            background-color: #8001EF
+            transition: all .3s
+            border-radius: 10px
+        &.active
+            span
+                animation-name: loader
+                animation-duration: 3s
+                animation-iteration-count: infinite
+
+
+.container
+    padding: 20px 16px
+    width: 100%
+
+a
+    text-decoration: none
+
+
+.catalog
+    &-top
+        display: flex
+        align-items: center
+        padding: 6px 4px
+        margin-bottom: 20px
+        background-color: #F3E5FF
+        border-radius: 8px
+        color: #8001EF
+        font-weight: 500
+        img
+            margin-right: 5px
+    &-block
+        padding: 20px 16px
+        background-color: #fff
+        border-radius: 8px
+    &-cat
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        margin-bottom: 24px
+        list-style: none
+        &-item
+            padding: 6px 12px
+            margin-right: 10px
+            margin-bottom: 10px
+            background-color: #F2F2F2
+            border-radius: 8px
+            &:last-child
+                margin-right: 0
+            a
+                font-size: 14px
+                line-height: 18px
+                color: #2A2A2F
+                font-weight: 500
+            &.active
+                background-color: #8001EF
+                a
+                    color: #fff
+
+    &-title
+        margin-bottom: 12px
+        color: #2A2A2F
+        font-size: 18px
+        line-height: 24px
+        font-weight: 700
+    &-list
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        flex-wrap: wrap
+    &-item
+        position: relative
+        width: 100%
+        max-width: calc( 50% - 8px )
+        margin-bottom: 12px
+    &-rating
+        position: absolute
+        left: 4px
+        top: 4px
+        background-color: #fff
+        padding: 4px 8px
+        border-radius: 8px
+        font-size: 12px
+        font-weight: 500
+        line-height: 16px
+        color: #FF9E0A
+        display: flex
+        align-items: center
+        img
+            margin-right: 4px
+    &-img
+        margin-bottom: 6px
+        border-radius: 8px
+        overflow: hidden
+        display: flex
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &-name
+        margin-bottom: 6px
+        font-size: 12px
+        color: #2A2A2F
+        line-height: 16px
+        font-weight: 500
+        letter-spacing: 0.01em
+    &-info
+        margin-bottom: 6px
+        color: #ABACAF
+        font-size: 12px
+        font-weight: 500
+        line-height: 16px
+        letter-spacing: 0.01em
+    &-quantity
+        padding: 6px 10px
+        display: flex
+        align-items: center
+        color: #8001EF
+        background-color: #F2F2F2
+        border-radius: 8px
+        max-width: max-content
+        font-size: 14px
+        font-weight: 500
+        line-height: 18px
+        &-minus, &-plus
+            display: flex
+            cursor: pointer
+        &-minus
+            margin-right: 10px
+            display: none
+        &-total
+            min-width: 33px
+            margin-right: 10px
+        
+
+        svg
+            path
+                fill: #8001EF
+        &.active
+            max-width: 100%
+            background-color: #8001EF
+            color: #fff
+            justify-content: center
+            .catalog-quantity-minus
+                margin-right: 10px
+                display: flex
+            svg
+                path
+                    fill: #fff
+
+
+
+.cart
+    &-catalog
+        color: #A9AAAD
+        font-size: 16px
+        line-height: 21px
+        display: inline-block
+        letter-spacing: 0.01em
+        margin-bottom: 20px
+    &-empty
+        &-block
+            padding: 24px 16px
+            border-radius: 8px
+            background-color: #fff
+    &-title
+        margin-bottom: 12px
+        font-size: 18px
+        line-height: 24px
+        font-weight: 700
+        color: #2A2A2F
+    &-subtitle
+        margin-bottom: 12px
+        font-size: 14px
+        line-height: 18px
+        color: #2A2A2F
+    &-block
+        position: relative
+        height: calc(100vh - 135px)
+        padding: 20px 16px 16px
+        border-radius: 8px
+        background-color: #fff
+        .cart-title
+            margin-bottom: 16px
+    &-info
+            width: calc( 70% - 9px )
+    &-delete
+        position: absolute
+        right: 0
+        top: 0
+        cursor: pointer
+    .catalog
+        &-name
+            min-height: 32px
+            margin-bottom: 2px
+        &-info
+            margin-bottom: 12px
+        &-item
+            display: flex
+            align-items: flex-start
+            justify-content: space-between
+            max-width: 100%
+            margin-bottom: 16px
+            padding-bottom: 16px
+            border-bottom: 1px solid #EDEDED
+        &-img
+            max-width: 30%
+            margin-bottom: 0
+        &-quantity
+            max-width: 150px
+
+    &-checkout
+        position: absolute
+        bottom: 16px
+        max-width: calc( 100% - 32px )
+    
+.checkout
+    &-title
+        font-size: 16px
+        margin-bottom: 8px
+        font-weight: 500
+        line-height: 22px
+        color: #2A2A2F
+    &-input
+        display: flex
+        flex-wrap: wrap
+        position: relative
+        margin-bottom: 41px
+        span
+            position: absolute
+            left: 0
+            bottom: 8px
+            font-size: 16px
+            line-height: 21px
+            color: #ABACAF
+            transition: all .3s
+            font-weight: 500
+        input
+            width: 100%
+            display: inline-block
+            border: none
+            border-bottom: 1px solid #EDEDED
+            padding: 0
+            padding-bottom: 8px
+            color: #2A2A2F
+            font-size: 16px
+            line-height: 21px
+            font-weight: 500
+            &:focus + span, &:not(:placeholder-shown) + span
+                font-size: 12px
+                bottom: 34px
+    .cart-block
+        padding-top: 41px
+    &-comment
+        textarea
+            padding: 12px
+            width: 100%
+            border: none
+            background-color: #F2F2F2
+            border-radius: 8px
+            font-size: 16px
+            line-height: 21px
+            color: #2A2A2F
+            &::placeholder
+                color: #ABACAF
+                font-size: 12px
+    &-modal
+        position: fixed
+        left: 50%
+        top: 50%
+        width: 100%
+        max-width: calc( 100% - 32px )
+        transform: translate(-50%, -50%)
+        padding: 0 16px 24px
+        background-color: #fff
+        border-radius: 8px
+        box-shadow: 0px 0px 12px rgba(138, 173, 177, 0.12)
+        z-index: 1
+        &::after
+            position: absolute
+            left: 0
+            top: 0
+            height: 100%
+            width: 100%
+            background-color: rgba(0, 0, 0, .8)
+            z-index: -1
+        &-avatar
+            margin-bottom: 12px
+            margin-top: -61px
+            text-align: center
+        &-title
+            margin-bottom: 12px
+            font-size: 24px
+            line-height: 32px
+            font-weight: 700
+            text-align: center
+        &-subtitle
+            font-size: 16px
+            line-height: 22px
+            font-weight: 500
+            margin-bottom: 24px
+        
+
+
+                
+
+        
+        
+
+.modal
+    display: none
+    width: 100%
+    height: 100%
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    max-width: 567px
+    background-color: rgba(0, 0, 0, .8)
+    z-index: 999
+    &.active
+        display: block
+    &-close
+        position: absolute
+        right: 17px
+        top: 17px
+        cursor: pointer
+
+
+
+
+
+
+
+
+
+
+
+
+.map-page
+    display: none
+
+
+#next-page:checked ~ .map-bottom
+    display: none
+
+#next-page:checked ~  .map-page
+    display: block
+
+
+@keyframes loader
+    0%
+        width: 0%
+    100%
+        width: 100%
