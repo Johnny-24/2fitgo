@@ -2,7 +2,7 @@
 
 $(document).on("ready", function () {
   // Svg for everybody
-  svg4everybody(); // Polifill for IE objectFitImages
+  svg4everybody(); // Polyfill for IE objectFitImages
 
   objectFitImages(); // Category
 
@@ -56,12 +56,10 @@ $(document).on("ready", function () {
     $(this).parent().toggleClass('active');
   });
   $(document).on('mouseup', function (e) {
-    var div = $(".product-list__breadcrumbs-item");
+    var div = $('.product-list__breadcrumbs-item');
 
     if (!div.is(e.target) && div.has(e.target).length === 0) {
-      $(".product-list__breadcrumbs-item").removeClass('active');
+      $(div).removeClass('active');
     }
-
-    ;
   });
 });
