@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <img src="./gift-close.png" class="gift gift--close">
+  <img src="./gift-open.png" class="gift gift--open">
+  <div class="text">5000&#8381; на Avon !!! </div>
+</body>
+</html>
+
+<style>
+  body {
+    background: rgb(251,187,63);
+    background: radial-gradient(circle, rgba(251,187,63,1) 0%, rgba(255,0,0,1) 100%);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+  .gift {
+    width: 200px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .gift--open {
+    width: 300px;
+    display: none;
+  }
+  .text {
+    position: fixed;
+    left: 50%;
+    top: calc(50% - 15px);
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 40px;
+    width: 100%;
+    text-align: center;
+    transition: .5s;
+    scale: 0;
+    transform-origin: 0 0;
+  }
+  .text.open {
+    scale: 1;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function(){
+    const giftClose = document.querySelector('.gift--close')
+    const giftOpen = document.querySelector('.gift--open')
+    const text = document.querySelector('.text')
+
+    giftClose.addEventListener('click', function(){
+      this.style.display="none"
+      giftOpen.style.display="block"
+      text.classList.add('open')
+    })
+
+  });
+</script>
